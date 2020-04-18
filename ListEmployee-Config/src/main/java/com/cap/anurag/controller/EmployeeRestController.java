@@ -1,6 +1,7 @@
 package com.cap.anurag.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -38,7 +39,7 @@ public class EmployeeRestController {
 	
 	
 	@GetMapping("/findById/{empId}")
-	public Employee findEmployee(@PathVariable Integer empId)
+	public Optional<Employee>findEmployee(@PathVariable Integer empId)
 	{
 		return empService.findEmployee(empId);
 		

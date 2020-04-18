@@ -19,7 +19,7 @@ EmployeeDao  empDao;
 @Override
 public void updateEmployee(Employee e) 
 {
-	boolean result=empDao.exists(e.getId());
+	boolean result=empDao.existsById(e.getId());
     if(result){
 	// TODO Auto-generated method stub
 	empDao.save(e);

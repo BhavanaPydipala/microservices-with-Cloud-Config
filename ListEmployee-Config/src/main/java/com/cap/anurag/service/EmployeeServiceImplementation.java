@@ -1,6 +1,7 @@
 package com.cap.anurag.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,11 +20,10 @@ EmployeeDao  empDao;
 public List<Employee> findAllEmployees() {
 	// TODO Auto-generated method stub
 	return empDao.findAll();
-}
-@Override
-public Employee findEmployee(Integer empId) {
+}@Override
+public Optional<Employee> findEmployee(Integer empId) {
 	// TODO Auto-generated method stub
-	return empDao.findOne(empId);
+	return empDao.findById(empId);
 }
 
 }
